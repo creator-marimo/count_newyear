@@ -1,0 +1,12 @@
+p{
+    font-size:2em;
+}
+#text{
+    
+    font-size: 10em;
+    margin: 0;
+}
+#count{
+    display: flex;
+    align-items: flex-end;
+}

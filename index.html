@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Count</title>
+</head>
+<body>
+    <h1>お正月まであと何日？</h1>
+    <div id="count">
+        <p>残り</p>
+        <p id="text"></p>
+        <p>日</p>
+    </div>
+    
+    
+    <script>
+        function countDay(){
+            var today = new Date();
+            var oomisoka = today.getFullYear() + "/12/31";
+            Date.parse(oomisoka);
+            count = Math.floor((Date.parse(oomisoka) - today.getTime()) / (24 * 60 * 60 * 1000)) + 1;;
+            return count;
+        }
+        document.getElementById("text").innerHTML = countDay();
+    </script>
+</body>
+</html>
